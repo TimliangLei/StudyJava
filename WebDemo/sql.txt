@@ -1,0 +1,43 @@
+####用户#####
+CREATE TABLE demo_user (
+	id int NOT NULL AUTO_INCREMENT,
+	user_id varchar(30) NOT NULL,
+	user_name varchar(30) NOT NULL,
+	nickname varchar(30),
+	password varchar(128) NOT NULL,
+	is_admin varchar(1) NOT NULL default 'N' comment 'N: 普通用户  Y: 管理员',
+	primary key (id)
+)DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+insert into demo_user values(1,'test1','测试员1','测试员1','111111','Y');
+insert into demo_user values(2,'test2','测试员2','测试员1','111111','N');
+
+drop table if exists demo_archives;
+drop table if exists demo_user ;
+####用户#####
+CREATE TABLE demo_user (
+	id int NOT NULL AUTO_INCREMENT,
+	user_id varchar(30) NOT NULL,
+	user_name varchar(30) NOT NULL,
+	nickname varchar(30),
+	password varchar(128) NOT NULL,
+	is_admin varchar(1) NOT NULL default 'N' comment 'N: 普通用户  Y: 管理员',
+	primary key (id)
+)DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+######用户档案##
+CREATE TABLE demo_archives (
+	id int NOT NULL,
+	gender varchar(1) NOT NULL comment 'M:男 F:女',
+	birthday varchar(15),
+	education varchar(1) comment '学历',
+	school varchar(30) comment '学校',
+	primary key (id),
+	CONSTRAINT demo_archives_fk1 foreign key (id) references demo_user(id) ON DELETE CASCADE ON UPDATE CASCADE
+)DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+commit;
+
+ALTER TABLE demo_archives add CONSTRAINT `demo_archives_fk11`
+FOREIGN KEY ( id )
+REFERENCES demo_user ( id )
+ON DELETE CASCADE ON UPDATE CASCADE;

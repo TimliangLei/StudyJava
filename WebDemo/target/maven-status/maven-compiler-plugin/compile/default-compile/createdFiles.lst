@@ -1,0 +1,9 @@
+com\inspur\service\IUserService.class
+com\inspur\control\FruitController.class
+com\inspur\pojo\User.class
+com\inspur\dao\UserMapper.class
+com\inspur\control\LoginController.class
+com\inspur\pojo\Fruit.class
+com\inspur\service\impl\UserServiceImpl.class
+com\inspur\control\UserController.class
+com\inspur\pojo\UserArchive.class

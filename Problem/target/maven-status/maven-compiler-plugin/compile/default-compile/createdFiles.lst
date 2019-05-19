@@ -1,0 +1,11 @@
+demo\ioc\pojo\English.class
+demo\ioc\simpleFactory\HelloWorld.class
+staticvar\Main.class
+demo\ioc\pojo\Chinese.class
+demo\ioc\pojo\Human.class
+demo\ioc\improveFactory\HelloWorld.class
+demo\ioc\simpleFactory\HumanFactory.class
+integer\Main.class
+demo\ioc\improveFactory\Main.class
+demo\ioc\o2o\HelloWorld.class
+demo\ioc\improveFactory\HumanFactory.class

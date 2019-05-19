@@ -1,0 +1,7 @@
+com\inspur\service\Server.class
+com\inspur\utils\BeanUtils.class
+com\inspur\utils\FileReadUtil.class
+com\inspur\utils\StringUtil.class
+com\inspur\App.class
+com\inspur\utils\PropUtils.class
+com\inspur\utils\FileCopyUtils.class

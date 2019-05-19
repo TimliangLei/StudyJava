@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "classpath:/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="jdbc.properties"></properties>
+
+    <!-- 资源文件的路径配置  注：cn前面不能用/否则会抛出异常-->
+    <!-- 配置连接数据库的环境，（开发环境） -->
+    <environments default="development">
+        <environment id="development">
+            <!-- 事务交给jdbc管理，Conection(事务) commit(提交) rollback(回滚)  -->
+            <transactionManager type="JDBC"/>
+            <!-- 数据源 用来连接数据库（包含四要素，driver,url,username,password） -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 包含隐射文件主要用于编写sql语句 -->
+    <mappers>
+        <!-- 隐射的资源文件  隐射文件主要编写sql语句 -->
+        <mapper class="com.inspur.dao.UserArchiveMapper"/>
+        <mapper class="com.inspur.dao.UserMapper"/>
+    </mappers>
+</configuration>
